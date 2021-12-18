@@ -20,4 +20,59 @@ def DrukujPlansze(pole):
     print(f"{pole['1']}|{pole['2']}|{pole['3']}")
 
 
-DrukujPlansze(PlanszaDoGry)
+# DrukujPlansze(PlanszaDoGry)
+
+def gra():
+    gracz = "X"
+    licznik = 0
+    for i in range(10):
+        DrukujPlansze(PlanszaDoGry)
+        move = input(f'To jest twój ruch {gracz}. Wybierz gdzie chcesz postawic znak!')
+        if PlanszaDoGry[move] == ' ':
+            PlanszaDoGry[move] = gracz
+            licznik  +=1
+        else:
+            print('Miejsce jest zajęte!\n Wstaw swój znak gdzieś indzej!')
+            continue
+        if licznik >= 5:
+            if PlanszaDoGry['7'] == PlanszaDoGry['8'] == PlanszaDoGry['9'] != ' ':
+                DrukujPlansze(PlanszaDoGry)
+                print('\nKoniec gry!\n')
+                print(f'Wygrał gracz: {gracz}')
+                break
+            elif PlanszaDoGry['4'] == PlanszaDoGry['5'] == PlanszaDoGry['6'] != ' ':
+                DrukujPlansze(PlanszaDoGry)
+                print('\nKoniec gry!\n')
+                print(f'Wygrał gracz: {gracz}')
+                break
+            elif PlanszaDoGry['1'] == PlanszaDoGry['3'] == PlanszaDoGry['3'] != ' ':
+                DrukujPlansze(PlanszaDoGry)
+                print('\nKoniec gry!\n')
+                print(f'Wygrał gracz: {gracz}')
+                break
+            elif PlanszaDoGry['7'] == PlanszaDoGry['4'] == PlanszaDoGry['1'] != ' ':
+                DrukujPlansze(PlanszaDoGry)
+                print('\nKoniec gry!\n')
+                print(f'Wygrał gracz: {gracz}')
+                break
+            elif PlanszaDoGry['8'] == PlanszaDoGry['5'] == PlanszaDoGry['2'] != ' ':
+                DrukujPlansze(PlanszaDoGry)
+                print('\nKoniec gry!\n')
+                print(f'Wygrał gracz: {gracz}')
+                break
+            elif PlanszaDoGry['9'] == PlanszaDoGry['6'] == PlanszaDoGry['3'] != ' ':
+                DrukujPlansze(PlanszaDoGry)
+                print('\nKoniec gry!\n')
+                print(f'Wygrał gracz: {gracz}')
+                break
+            elif PlanszaDoGry['7'] == PlanszaDoGry['5'] == PlanszaDoGry['3'] != ' ':
+                DrukujPlansze(PlanszaDoGry)
+                print('\nKoniec gry!\n')
+                print(f'Wygrał gracz: {gracz}')
+                break
+            elif PlanszaDoGry['9'] == PlanszaDoGry['5'] == PlanszaDoGry['1'] != ' ':
+                DrukujPlansze(PlanszaDoGry)
+                print('\nKoniec gry!\n')
+                print(f'Wygrał gracz: {gracz}')
+                break
+# gra()

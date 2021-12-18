@@ -77,6 +77,7 @@ def gra():
                 break
             if licznik == 9:
                 print('\n Gra zakończyła sie remisem!\n')
+                DrukujPlansze(PlanszaDoGry)
             
         if gracz == 'X':
             gracz = 'O'
@@ -87,3 +88,6 @@ def gra():
         for key in KlawiszeGry:
             PlanszaDoGry[key] = ' '
         gra()
+
+if __name__ == '__main__':
+    gra()

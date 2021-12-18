@@ -75,4 +75,15 @@ def gra():
                 print('\nKoniec gry!\n')
                 print(f'Wygrał gracz: {gracz}')
                 break
-# gra()
+            if licznik == 9:
+                print('\n Gra zakończyła sie remisem!\n')
+            
+        if gracz == 'X':
+            gracz = 'O'
+        else:
+            gracz = 'X'
+    restart  = input('Czy chcesz zagrać ponownie?/ (t/n)')
+    if restart == 't' or restart == 'T':
+        for key in KlawiszeGry:
+            PlanszaDoGry[key] = ' '
+        gra()
